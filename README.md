@@ -1,0 +1,2 @@
+# awscs
+Credential selector

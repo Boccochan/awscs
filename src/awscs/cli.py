@@ -12,13 +12,7 @@ class Awscs:
 
     def run(self) -> int:
         if self._args.s:
-            try:
-                handler.set_default_credential()
-
-            except exception.AwscsException:
-                return 1
-
-            return 0
+            return handler.set_default_credential()
 
         elif self._args.c:
             return handler.show_config()

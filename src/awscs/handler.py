@@ -40,7 +40,7 @@ def _select_credentials(credentials: List[str]) -> str:
     return credentials[index]
 
 
-def set_default_credential():
+def _set_default_credential():
     crd.copy()
     profiles = crd.load(crd.DEFAULT_TEMPLATE_PATH)
 
@@ -51,3 +51,13 @@ def set_default_credential():
 
     config.set_setting(tag, '')
     show_config()
+
+
+def set_default_credential():
+    try:
+        _set_default_credential()
+
+    except exception.AwscsException:
+        return 1
+
+    return 0

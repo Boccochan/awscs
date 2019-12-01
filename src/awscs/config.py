@@ -23,10 +23,10 @@ def set_setting(profile: str, region: str):
         json.dump({"AWS_PROFILE": profile, "AWS_DEFAULT_REGION": region}, f)
 
 
-def load_regions() -> List[str]:
-    # currently, regions list is fixed.
-    return [
-        'ap-northeast-1',
-        'us-east-1',
-        'ap-southeast-1',
-    ]
+# def load_regions() -> List[str]:
+#     # currently, regions list is fixed.
+#     return [
+#         'ap-northeast-1',
+#         'us-east-1',
+#         'ap-southeast-1',
+#     ]

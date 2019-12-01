@@ -12,7 +12,9 @@ setup(
     name="awscs",
     version=version,
     packages=find_packages("src"),
-    install_requires=[],
+    install_requires=[
+        'click'
+    ],
     extras_require={
         "test": [
             "pytest",
